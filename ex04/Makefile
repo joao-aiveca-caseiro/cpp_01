@@ -1,10 +1,5 @@
-SRCS		= main.cpp\
-				HumanA.cpp\
-				HumanB.cpp\
-				Weapon.cpp
-INCS		= HumanA.hpp\
-				HumanB.hpp\
-				Weapon.hpp
+SRCS		= main.cpp
+INCS		= 
 OBJS		= ${SRCS:.cpp=.o}
 NAME		= test
 CXX			= c++

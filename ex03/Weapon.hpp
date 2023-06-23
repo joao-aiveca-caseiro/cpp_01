@@ -6,7 +6,7 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 16:54:39 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/06/22 19:40:31 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/06/23 15:45:32 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Weapon
 
 		Weapon(std::string newtype);
 
-		std::string	getType() const;
-		void		setType(std::string newtype);
+		const std::string	&getType(void);
+		void				setType(std::string newtype);
 
 	private:
 	

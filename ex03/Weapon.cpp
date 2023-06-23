@@ -6,7 +6,7 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 16:54:36 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/06/22 19:40:23 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/06/23 15:45:38 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ Weapon::Weapon(std::string newtype)
 	this->setType(newtype);
 }
 
-std::string	Weapon::getType(void) const
+const std::string &Weapon::getType(void)
 {
-	return (this->_type);
+	std::string	&ref = this->_type;
+	return (ref);
 }
 
 void	Weapon::setType(std::string newtype)

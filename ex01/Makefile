@@ -4,11 +4,11 @@ SRCS		= main.cpp\
 INCS		= Zombie.hpp
 OBJS		= ${SRCS:.cpp=.o}
 NAME		= test
-CC			= c++
-CFLAGS		= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CXX			= c++
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
 $(NAME):	${OBJS} ${INCS}
-			${CC} ${CFLAGS} ${OBJS} -o ${NAME}
+			${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}
 
 all:		$(NAME)
 
