@@ -6,7 +6,7 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 19:10:00 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/06/27 03:24:45 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/06/27 16:56:59 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,10 @@ int	main(int argc, char **argv)
 		std::ifstream	infile;
 		std::ofstream	outfile;
 		std::string		filename(argv[1]);
+		std::string		s1(argv[2]);
+		std::string		s2(argv[3]);
 		std::string		line;
-		std::string		edited;
+		int				pos;
 
 		infile.open(argv[1]);
 		if (!infile)
@@ -39,10 +41,21 @@ int	main(int argc, char **argv)
 			return (1);
 		}
 		outfile.open(filename.append(".replace").c_str());
-		while (getline(infile, line))
+		getline(infile, line);
+		while (1)
 		{
-			std::cout << "HELLO\n"; 
+			while ((pos = line.find(argv[2])) != -1)
+			{
+				line.erase(pos, s1.length());
+				line.insert(pos, s2);
+			}
+			outfile << line;
+			if (!getline(infile, line))
+				break ;
+			outfile << std::endl;
 		}
+		infile.close();
+		outfile.close();
 	}
 	return (0);
 }
