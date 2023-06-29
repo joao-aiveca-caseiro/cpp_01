@@ -1,10 +1,10 @@
 HELLO WORLD
 It's time to test the amazing functionalities of the ex04 program
 Let's see if everything is working properly!
-HELLO WORLD HELLO
+HELLO WORLD
 It's time to test the amazing functionalities of the ex04 program
 Let's see if everything is working properly!
-HELLO WORLD
+HELLO WORLD HELLO
 It's time to test the amazing functionalities of the ex04 program
 Let's see if everything is working properly!
 HELLO WORLD

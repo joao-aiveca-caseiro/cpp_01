@@ -6,7 +6,7 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 17:04:42 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/06/27 17:14:44 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/06/28 23:08:43 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ class	Harl
 {
 	public:
 		
-		void	complain(std::string level);
+		void	complainParser(std::string level);
+		void	complainExecutor(int max_level);
 
 	private:
 

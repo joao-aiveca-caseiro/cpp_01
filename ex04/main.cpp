@@ -6,7 +6,7 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 19:10:00 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/06/27 16:56:59 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/06/29 02:29:33 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,20 @@ int	main(int argc, char **argv)
 			std::cout << "Error: the file does not exist or can't be opened." << std::endl;
 			return (1);
 		}
+		
 		outfile.open(filename.append(".replace").c_str());
+		
 		getline(infile, line);
 		while (1)
 		{
-			while ((pos = line.find(argv[2])) != -1)
+			pos = line.find(argv[2]);
+			while (pos != -1)
 			{
 				line.erase(pos, s1.length());
 				line.insert(pos, s2);
+				pos = line.find(argv[2], pos + 1);
+				if (pos == -1)
+					break ;
 			}
 			outfile << line;
 			if (!getline(infile, line))
