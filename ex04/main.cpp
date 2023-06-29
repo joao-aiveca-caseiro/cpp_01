@@ -51,7 +51,7 @@ int	main(int argc, char **argv)
 			{
 				line.erase(pos, s1.length());
 				line.insert(pos, s2);
-				pos = line.find(argv[2], pos + 1);
+				pos = line.find(argv[2], pos + s2.length();
 				if (pos == -1)
 					break ;
 			}
