@@ -6,7 +6,7 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 19:10:00 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/06/29 02:29:33 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/06/30 14:29:28 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int	main(int argc, char **argv)
 {
-	if (argc != 4)
+	if (argc != 4 || !argv[2][0])
 	{
 		std::cout << "Please enter three arguments in the following order:\n"
 					<< "- The name of the file you wish to parse;\n"
@@ -51,7 +51,7 @@ int	main(int argc, char **argv)
 			{
 				line.erase(pos, s1.length());
 				line.insert(pos, s2);
-				pos = line.find(argv[2], pos + s2.length();
+				pos = line.find(argv[2], pos + s2.length());
 				if (pos == -1)
 					break ;
 			}
